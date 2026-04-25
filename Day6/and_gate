@@ -1,0 +1,59 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib64/ivl/system.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib64/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib64/ivl/va_math.vpi";
+S_0x561c377206b0 .scope module, "tb_and_gate" "tb_and_gate" 2 6;
+ .timescale 0 0;
+v0x561c37744760_0 .var "A", 0 0;
+v0x561c37744800_0 .var "B", 0 0;
+v0x561c377448a0_0 .net "Y", 0 0, L_0x561c377449a0;  1 drivers
+S_0x561c377320c0 .scope module, "DUT" "and_gate" 2 11, 2 1 0, S_0x561c377206b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+L_0x561c377449a0 .functor AND 1, v0x561c37744760_0, v0x561c37744800_0, C4<1>, C4<1>;
+v0x561c377322f0_0 .net "A", 0 0, v0x561c37744760_0;  1 drivers
+v0x561c37744580_0 .net "B", 0 0, v0x561c37744800_0;  1 drivers
+v0x561c37744640_0 .net "Y", 0 0, L_0x561c377449a0;  alias, 1 drivers
+    .scope S_0x561c377206b0;
+T_0 ;
+    %vpi_call 2 14 "$monitor", "Time = %0d, A = %d, B = %d, Y = %d.\012", $time, v0x561c37744760_0, v0x561c37744800_0, v0x561c377448a0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x561c37744760_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x561c37744800_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x561c37744760_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x561c37744800_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x561c37744760_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x561c37744800_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x561c37744760_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x561c37744800_0, 0, 1;
+    %delay 5, 0;
+    %end;
+    .thread T_0;
+    .scope S_0x561c377206b0;
+T_1 ;
+    %vpi_call 2 27 "$dumpfile", "and_gate.vcd" {0 0 0};
+    %vpi_call 2 28 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "and_gate.v";

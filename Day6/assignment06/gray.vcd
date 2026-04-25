@@ -1,0 +1,121 @@
+$date
+	Mon Mar 30 18:03:14 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_gray $end
+$var wire 4 ! Y_tb [3:0] $end
+$var reg 4 " A_tb [3:0] $end
+$var integer 32 # i [31:0] $end
+$scope module uu1 $end
+$var wire 4 $ A [3:0] $end
+$var wire 4 % Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+b0 $
+b1 #
+b0 "
+b0 !
+$end
+#5
+b1 !
+b1 %
+b10 #
+b1 "
+b1 $
+#10
+b11 !
+b11 %
+b11 #
+b10 "
+b10 $
+#15
+b10 !
+b10 %
+b100 #
+b11 "
+b11 $
+#20
+b110 !
+b110 %
+b101 #
+b100 "
+b100 $
+#25
+b111 !
+b111 %
+b110 #
+b101 "
+b101 $
+#30
+b101 !
+b101 %
+b111 #
+b110 "
+b110 $
+#35
+b100 !
+b100 %
+b1000 #
+b111 "
+b111 $
+#40
+b1100 !
+b1100 %
+b1001 #
+b1000 "
+b1000 $
+#45
+b1101 !
+b1101 %
+b1010 #
+b1001 "
+b1001 $
+#50
+b1111 !
+b1111 %
+b1011 #
+b1010 "
+b1010 $
+#55
+b1110 !
+b1110 %
+b1100 #
+b1011 "
+b1011 $
+#60
+b1010 !
+b1010 %
+b1101 #
+b1100 "
+b1100 $
+#65
+b1011 !
+b1011 %
+b1110 #
+b1101 "
+b1101 $
+#70
+b1001 !
+b1001 %
+b1111 #
+b1110 "
+b1110 $
+#75
+b1000 !
+b1000 %
+b10000 #
+b1111 "
+b1111 $
+#85
