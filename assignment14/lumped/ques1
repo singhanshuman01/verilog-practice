@@ -1,0 +1,64 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002395eaf9c30 .scope module, "y" "y" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "m";
+    .port_info 2 /INPUT 1 "n";
+    .port_info 3 /INPUT 1 "p";
+    .port_info 4 /INPUT 1 "q";
+L_000002395eaf9dc0 .functor BUFZ 1, v000002395ebb3740_0, C4<0>, C4<0>, C4<0>;
+v000002395eaf63b0_0 .var "e", 0 0;
+v000002395eafeed0_0 .var "f", 0 0;
+v000002395ebb3740_0 .var "g", 0 0;
+o000002395ebb7048 .functor BUFZ 1, C4<z>; HiZ drive
+v000002395ebb37e0_0 .net "m", 0 0, o000002395ebb7048;  0 drivers
+o000002395ebb7078 .functor BUFZ 1, C4<z>; HiZ drive
+v000002395ebb3880_0 .net "n", 0 0, o000002395ebb7078;  0 drivers
+v000002395ebb3920_0 .net "out", 0 0, L_000002395eaf9dc0;  1 drivers
+o000002395ebb70d8 .functor BUFZ 1, C4<z>; HiZ drive
+v000002395ebb39c0_0 .net "p", 0 0, o000002395ebb70d8;  0 drivers
+o000002395ebb7108 .functor BUFZ 1, C4<z>; HiZ drive
+v000002395ebb3a60_0 .net "q", 0 0, o000002395ebb7108;  0 drivers
+    .scope S_000002395eaf9c30;
+T_0 ;
+    %fork t_1, S_000002395eaf9c30;
+    %fork t_2, S_000002395eaf9c30;
+    %join;
+    %join;
+    %jmp t_0;
+t_1 ;
+    %delay 11, 0;
+    %load/vec4 v000002395ebb37e0_0;
+    %load/vec4 v000002395ebb3880_0;
+    %or;
+    %store/vec4 v000002395eaf63b0_0, 0, 1;
+    %end;
+t_2 ;
+    %delay 8, 0;
+    %load/vec4 v000002395ebb39c0_0;
+    %load/vec4 v000002395ebb3a60_0;
+    %and;
+    %store/vec4 v000002395eafeed0_0, 0, 1;
+    %end;
+    .scope S_000002395eaf9c30;
+t_0 ;
+    %delay 4, 0;
+    %load/vec4 v000002395eaf63b0_0;
+    %load/vec4 v000002395eafeed0_0;
+    %or;
+    %store/vec4 v000002395ebb3740_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "ques1.v";
