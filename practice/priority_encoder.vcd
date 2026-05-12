@@ -1,0 +1,43 @@
+$date
+	Tue Apr 14 18:28:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_priority_encoder $end
+$var wire 2 ! tb_y [1:0] $end
+$var reg 4 " tb_i [3:0] $end
+$scope module penc $end
+$var wire 4 # i [3:0] $end
+$var reg 2 $ Y [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b1 #
+b1 "
+b0 !
+$end
+#10
+bx !
+bx $
+b11 "
+b11 #
+#20
+b1101 "
+b1101 #
+#30
+b100 "
+b100 #
+#40
+b111 "
+b111 #
+#80
